@@ -597,7 +597,38 @@ opacity: 0px;
     z-index: 1;
 }
 
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
 
+.nav-arrow {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.dots {
+  display: flex;
+  gap: 5px;
+  margin: 0 15px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #007bff;
+}
 .element2 img{
   height: 60px;
   width: 60px;
@@ -626,20 +657,17 @@ opacity: 0px;
   position: relative;
   overflow: hidden;
 }
-.bgimg{
-  height: 700px;
-  width: 600px;
-  z-index: -1;
+
+.vector-bg {
   position: absolute;
-}
-.bgimg img{
-  margin-left: 1000px;
-    margin-top: 50px;
-    
-    width: 700.95px;
-    height: 545.35px;
-    top: 0.01px;
-    left: 245.56px;
+  top: -35px;
+  left: 1100px;
+  right: 0;
+  z-index: -1;
+  width: 316px;
+  height: 375px;
+  pointer-events: none; /* Disable interaction with the image */
+  opacity: 0.5; /* Optional: Add transparency */
 }
 .latest-articles h2 {
   font-size: 24px;
@@ -656,6 +684,7 @@ opacity: 0px;
 }
 .articles-container {
   display: flex;
+  position: relative;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
@@ -680,6 +709,7 @@ opacity: 0px;
   overflow: hidden;
   transition: transform 0.3s ease;
   box-shadow: 10px 40px 50px 0px #E5E9F666;
+ 
 
 }
 
